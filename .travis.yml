@@ -1,0 +1,15 @@
+language: node_js
+node_js:
+- '0.11'
+before_script:
+- npm install -g gulp
+script:
+- gulp
+deploy:
+  provider: heroku
+  api_key:
+    secure: KUWxjMmTHiFgZTkz5iROu6Dfr6zrm5EbBLHtvA6AXKKcPBltaTNBzZcobDCYazTA4LpVwlADw+kG0ivvhCZhjn36soxqjOnJj0FOUqyDnFhvvbXHua/aXjmeafMQQx6J132yUUNbOiauYEDK+JKwyEVz6L9Bu/Epq/NxJ1ZymtNU+Ikl0Q5Imd5e2Pm3iudlcrD6JwEz6z/2Og2IxohFX0xKAvzA9LOrWa6oNGJzYOcDaQH9cEuT5JGw+aTKJkFQUTGuFE6Op6vbaRuH/Rj9BPSqaHCLo5AWWBr48s2EHPJmM/8PDGwHM6CpJuPu//nZPQNTsUshT4ftFzZhYRHLFG4NVIGeiIYjrDQHYKUVZ7Faibvwp3tkKCdzUr408uHHqfFMtfyGy/XD9zpNza+xarOBZdxFGeZMBMlD/5q5vN7LcxMqnk6rkW5hdCFPT6k8Fpl5KK5fkWir4w+CzpLzb0e8+P9SMwdrs0PgMpFmxLFAM/0GU8xYIBrcjSOd6qGc1/gk5g1M7rGm9NnhoMSOzHE46byi67Qw3lSIj5NHQTJUTJCWXgKXPRZRJAW4LZTFlK622SNwMOKaR3+k7+hH7xW01bd5FQ1jqH9mv5Wvf0LkwdKB4fH0hpM4K+0w/uas7H3JJy4HNvSLOPYcH/p24/P/0ePulj+ef8ApQnbPmps=
+  app: tnp-web
+  skip_cleanup: true 
+  on:
+    repo: andysterland/TNP
