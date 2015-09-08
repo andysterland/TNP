@@ -12,7 +12,6 @@ var outputPathBase = 'dist';
 var outputPathStatic = 'static';
 var outputPathType = '';
 var outputPath = '';
-
 gulp.task('compile-jade', function() {
     gulp.src('src/templates/**/*.jade')
         .pipe(jade())
@@ -20,8 +19,9 @@ gulp.task('compile-jade', function() {
 });
 
 gulp.task('compile-sass', function () {
-    gulp.sass('src/sass/**/*.sass', {indentedSyntax: true})
-        .pipe(gulp.dest(outputPath +'/' + outputPathStatic + '/css'));
+    sass('src/sass/')
+    .on('error', sass.logError)
+    .pipe(gulp.dest(outputPath +'/' + outputPathStatic + '/css/main.css'));
 });
 
 gulp.task('copy-files', function () {
